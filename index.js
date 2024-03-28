@@ -29,7 +29,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "get":
         const contactById = await getContactById(id);
         console.log('Контакт з вказаним id:');
-        console.log(contactById || 'Контакт не знайдений');
+        console.log(contactById);
       break;
 
     case "add":
@@ -41,7 +41,7 @@ async function invokeAction({ action, id, name, email, phone }) {
     case "remove":
         const removedContact = await removeContact(id);
         console.log('Видалений контакт:');
-        console.log(removedContact || 'Контакт не знайдений');
+        console.log(removedContact);
       break;
 
     default:
